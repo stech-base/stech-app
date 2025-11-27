@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stech Solutions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+    }
+    header {
+      background: #111827;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: #1f2937;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: #d1d5db;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      width: 90%;
+      margin: auto;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00000020;
+      margin-bottom: 25px;
+    }
+    h2 {
+      color: #111827;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 15px;
+      padding: 12px 20px;
+      background: #111827;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+      background: #1f2937;
+      color: #d1d5db;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Stech Solutions</h1>
+  <p>Your trusted partner for computer, laptop & mobile repairs</p>
+</header>
+
+<nav>
+  <a href="#about">About Us</a>
+  <a href="#services">What We Do</a>
+  <a href="#repair">Book a Repair</a>
+</nav>
+
+<div class="container">
+
+  <!-- About Us -->
+  <div id="about" class="card">
+    <h2>About Stech Solutions</h2>
+    <p>
+      Stech Solutions is a professional tech repair and IT service provider offering
+      fast, reliable, and affordable fixes for laptops, computers, mobiles, and 
+      software-related issues.
+    </p>
+    <p>
+      We ensure quality service, doorstep pickup, and full transparency for every repair request.
+    </p>
+  </div>
+
+  <!-- Services -->
+  <div id="services" class="card">
+    <h2>What We Do</h2>
+    <ul>
+      <li>✔ Laptop & Computer Repair (Hardware + Software)</li>
+      <li>✔ Mobile Issue Diagnosis & Fixing</li>
+      <li>✔ OS Installation & Troubleshooting</li>
+      <li>✔ Virus Removal & System Optimization</li>
+      <li>✔ Data Backup & Recovery</li>
+      <li>✔ Network & Wi-Fi Setup</li>
+    </ul>
+  </div>
+
+  <!-- Repair Request Form -->
+  <div id="repair" class="card">
+    <h2>Book a Repair Request</h2>
+    <form action="https://formspree.io/f/mwkgrnyv" method="POST">
+      <!-- You can replace with your own backend later -->
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="phone" placeholder="Mobile Number" required />
+      <input type="text" name="address" placeholder="Pickup Address" required />
+      <textarea name="issue" rows="5" placeholder="Describe your issue..." required></textarea>
+      <button type="submit">Submit Repair Request</button>
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  © 2025 Stech Solutions | All Rights Reserved.
+</footer>
+
+</body>
+</html>
