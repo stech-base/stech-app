@@ -24,7 +24,7 @@
       });
     });
 
-    // Floating animation for hero logo
+    // Floating logo animation
     document.addEventListener("DOMContentLoaded", () => {
       const floatLogo = document.getElementById("floating-logo");
       let y = 0, direction = 1;
@@ -34,6 +34,14 @@
         if (y > 10 || y < -10) direction *= -1;
         floatLogo.style.transform = `translateY(${y}px)`;
       }, 60);
+    });
+
+    // Parallax background animation
+    document.addEventListener("mousemove", (e) => {
+      const bg = document.getElementById("hero-bg");
+      const x = (window.innerWidth - e.pageX * 3) / 90;
+      const y = (window.innerHeight - e.pageY * 3) / 90;
+      bg.style.transform = `translate(${x}px, ${y}px) scale(1.05)`;
     });
   </script>
 
@@ -47,7 +55,7 @@
 
       <!-- Logo Left -->
       <div class="flex items-center space-x-3">
-        <img src="stech-logo.png" class="w-10 h-10" alt="Stech Logo">
+        <img src="stech-logo.png" class="w-10 h-10 rounded-xl" alt="Stech Logo">
         <p class="text-xl font-bold text-indigo-700">Stech-Solutions</p>
       </div>
 
@@ -64,35 +72,44 @@
   <!-- HERO SECTION -->
   <header class="relative overflow-hidden">
 
-    <!-- Gradient Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-indigo-700/80 to-purple-700/80"></div>
-
-    <!-- Faded Background Logo -->
-    <div class="absolute inset-0 flex items-center justify-center opacity-[0.08] pointer-events-none select-none">
-      <img src="stech-logo.png" alt="Stech Logo" class="w-[520px] md:w-[700px]">
+    <!-- Full-Fit Background Logo With Parallax -->
+    <div id="hero-bg" class="absolute inset-0 opacity-[0.1] pointer-events-none select-none transition-all duration-300 ease-out">
+      <img src="stech-logo.png" 
+           alt="Background Logo" 
+           class="w-full h-full object-cover brightness-110" />
     </div>
+
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-indigo-700/70 to-purple-700/80"></div>
 
     <!-- Hero Content -->
     <div class="h-[85vh] flex items-center justify-center text-center px-6 relative z-10">
       <div data-aos="fade-up">
 
-        <!-- Floating Logo -->
-        <div class="relative flex justify-center mb-6">
-          <div class="absolute w-52 h-52 bg-purple-500 blur-3xl opacity-40 rounded-full"></div>
-          <img id="floating-logo" src="stech-logo.png"
-            class="w-32 drop-shadow-2xl relative z-10 select-none" alt="Stech Solutions Logo">
+        <!-- Main Floating Logo -->
+        <div class="relative flex justify-center mb-8">
+          <!-- Glow Behind Logo -->
+          <div class="absolute w-44 h-44 bg-purple-500/40 blur-3xl rounded-full"></div>
+
+          <img id="floating-logo" 
+               src="stech-logo.png"
+               class="w-36 rounded-2xl drop-shadow-2xl relative z-10 select-none"
+               alt="Stech Solutions Logo">
         </div>
 
-        <h1 class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg mb-2">
+        <!-- Title -->
+        <h1 class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg tracking-wide">
           Stech-Solutions
         </h1>
 
-        <p class="mt-2 text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-          Fast, reliable & futuristic repair experience for laptops, computers & mobiles.
+        <!-- Tagline -->
+        <p class="mt-4 text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
+          Fast, reliable & futuristic tech repair solutions at your doorstep.
         </p>
 
+        <!-- CTA Button -->
         <a href="#repair"
-          class="inline-block mt-6 bg-white text-indigo-700 px-10 py-3 rounded-xl font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all">
+          class="inline-block mt-8 bg-white text-indigo-700 px-10 py-3 rounded-xl font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all">
           Book a Repair Now
         </a>
       </div>
@@ -108,11 +125,9 @@
         <h2 class="text-3xl font-bold mb-4">About Stech Solutions</h2>
         <p class="text-gray-700 leading-relaxed">
           Stech Solutions delivers next-gen repair services using modern diagnostics and a customer-first approach.
-          We offer doorstep pickup, transparent updates, and fast resolutions for all tech issues.
         </p>
-
         <p class="mt-4 text-gray-700">
-          From hardware repairs to OS issues — we’ve got every device covered with precision.
+          We offer fast repairs, doorstep pickup, transparent updates, and expert hardware & software support.
         </p>
       </div>
     </section>
@@ -195,7 +210,7 @@
   <!-- FOOTER -->
   <footer class="bg-gray-900 text-gray-300 text-center py-8 mt-20">
     <div class="flex flex-col items-center space-y-3">
-      <img src="stech-logo.png" class="w-14 opacity-80" alt="Stech Solutions Logo">
+      <img src="stech-logo.png" class="w-14 rounded-xl opacity-80" alt="Stech Solutions Logo">
       <p class="text-lg font-medium">© 2025 Stech Solutions</p>
       <p class="text-sm">Fast • Trusted • Futuristic</p>
     </div>
