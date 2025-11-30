@@ -4,131 +4,138 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Stech Solutions</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-    }
-    header {
-      background: #111827;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background: #1f2937;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      color: #d1d5db;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .container {
-      width: 90%;
-      margin: auto;
-      padding: 20px;
-    }
-    .card {
-      background: white;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #00000020;
-      margin-bottom: 25px;
-    }
-    h2 {
-      color: #111827;
-    }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
-    }
-    button {
-      margin-top: 15px;
-      padding: 12px 20px;
-      background: #111827;
-      color: white;
-      font-size: 16px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    footer {
-      text-align: center;
-      padding: 15px;
-      margin-top: 20px;
-      background: #1f2937;
-      color: #d1d5db;
-    }
-  </style>
+
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS Animation Library -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      AOS.init();
+    });
+  </script>
 </head>
 
-<body>
+<body class="bg-gray-100 text-gray-800">
 
-<header>
-  <h1>Stech-Solutions</h1>
-  <p>Your trusted partner for computer, laptop & mobile repairs</p>
-</header>
+  <!-- HERO SECTION -->
+  <header class="relative">
+    <div class="h-[80vh] bg-gradient-to-r from-indigo-700 to-purple-700 flex items-center justify-center text-center px-6">
+      <div data-aos="fade-up">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-white drop-shadow-lg">Stech-Solutions</h1>
+        <p class="mt-4 text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto">
+          Fast, reliable & professional tech repair services at your doorstep.
+        </p>
 
-<nav>
-  <a href="#about">About Us</a>
-  <a href="#services">What We Do</a>
-  <a href="#repair">Book a Repair</a>
-</nav>
+        <a href="#repair"
+           class="inline-block mt-6 bg-white text-indigo-700 px-8 py-3 rounded-xl font-semibold text-lg shadow-md hover:shadow-xl transform hover:-translate-y-1 transition">
+          Book a Repair Now
+        </a>
+      </div>
+    </div>
+  </header>
 
-<div class="container">
+  <!-- NAVBAR -->
+  <nav class="bg-white shadow-lg py-4 sticky top-0 z-50">
+    <div class="flex justify-center space-x-8 text-lg">
+      <a href="#about" class="hover:text-indigo-600 font-medium transition">About</a>
+      <a href="#services" class="hover:text-indigo-600 font-medium transition">Services</a>
+      <a href="#repair" class="hover:text-indigo-600 font-medium transition">Book Repair</a>
+    </div>
+  </nav>
 
-  <!-- About Us -->
-  <div id="about" class="card">
-    <h2>About Stech Solutions</h2>
-    <p>
-      Stech Solutions is a professional tech repair and IT service provider offering
-      fast, reliable, and affordable fixes for laptops, computers, mobiles, and 
-      software-related issues.
-    </p>
-    <p>
-      We ensure quality service, doorstep pickup, and full transparency for every repair request.
-    </p>
+  <div class="max-w-6xl mx-auto p-6">
+
+    <!-- ABOUT -->
+    <section id="about" data-aos="fade-up" class="mt-10">
+      <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-200">
+        <h2 class="text-3xl font-bold mb-4">About Stech Solutions</h2>
+        <p class="text-gray-700 leading-relaxed">
+          Stech Solutions provides expert hardware, software, and mobile repair services. 
+          Our mission is to offer fast, affordable, and transparent repair experiences with pickup and delivery support.
+        </p>
+
+        <p class="mt-4 text-gray-700">
+          We diagnose problems accurately, ensure smooth communication, and deliver high-quality service every time.
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" data-aos="fade-up" class="mt-16">
+      <h2 class="text-3xl font-bold mb-6 text-center">Our Services</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card -->
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition border border-gray-200">
+          ✔ Laptop & Computer Repair (Hardware + Software)
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
+          ✔ Mobile Issue Diagnosis & Fixing
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
+          ✔ OS Installation & Troubleshooting
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
+          ✔ Virus Removal & System Optimization
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
+          ✔ Data Backup & Recovery
+        </div>
+
+        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-2xl hover:-translate-y-1 transition">
+          ✔ Network & Wi-Fi Setup
+        </div>
+      </div>
+    </section>
+
+    <!-- REPAIR FORM -->
+    <section id="repair" data-aos="fade-up" class="mt-20 mb-10">
+      <div class="bg-white p-10 rounded-2xl shadow-2xl border border-gray-200">
+        <h2 class="text-3xl font-bold mb-6 text-center">Book a Repair</h2>
+
+        <form action="https://formspree.io/f/mwkgrnyv" method="POST" class="space-y-6">
+          <input type="text" name="name" placeholder="Your Name" required
+                 class="w-full p-4 rounded-xl border border-gray-300 focus:ring-4 focus:ring-purple-300 outline-none" />
+
+          <input type="text" name="phone" placeholder="Mobile Number" required
+                 class="w-full p-4 rounded-xl border border-gray-300 focus:ring-4 focus:ring-purple-300 outline-none" />
+
+          <input type="text" name="address" placeholder="Pickup Address" required
+                 class="w-full p-4 rounded-xl border border-gray-300 focus:ring-4 focus:ring-purple-300 outline-none" />
+
+          <textarea name="issue" rows="5" placeholder="Describe your issue..." required
+                 class="w-full p-4 rounded-xl border border-gray-300 focus:ring-4 focus:ring-purple-300 outline-none"></textarea>
+
+          <button type="submit"
+            class="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-4 rounded-xl font-bold text-xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1">
+            Submit Repair Request
+          </button>
+        </form>
+      </div>
+    </section>
+
   </div>
 
-  <!-- Services -->
-  <div id="services" class="card">
-    <h2>What We Do</h2>
-    <ul>
-      <li>✔ Laptop & Computer Repair (Hardware + Software)</li>
-      <li>✔ Mobile Issue Diagnosis & Fixing</li>
-      <li>✔ OS Installation & Troubleshooting</li>
-      <li>✔ Virus Removal & System Optimization</li>
-      <li>✔ Data Backup & Recovery</li>
-      <li>✔ Network & Wi-Fi Setup</li>
-    </ul>
-  </div>
+  <!-- WHATSAPP FLOATING BUTTON -->
+  <a href="https://wa.me/91XXXXXXXXXX"
+     class="fixed bottom-6 right-6 bg-green-500 p-4 rounded-full shadow-2xl hover:bg-green-600 transition">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+         class="w-10" />
+  </a>
 
-  <!-- Repair Request Form -->
-  <div id="repair" class="card">
-    <h2>Book a Repair Request</h2>
-    <form action="https://formspree.io/f/mwkgrnyv" method="POST">
-      <!-- You can replace with your own backend later -->
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="text" name="phone" placeholder="Mobile Number" required />
-      <input type="text" name="address" placeholder="Pickup Address" required />
-      <textarea name="issue" rows="5" placeholder="Describe your issue..." required></textarea>
-      <button type="submit">Submit Repair Request</button>
-    </form>
-  </div>
-
-</div>
-
-<footer>
-  © 2025 Stech Solutions | All Rights Reserved.
-</footer>
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 text-center py-6 mt-16">
+    <p class="text-lg font-medium">© 2025 Stech Solutions</p>
+    <p class="text-sm mt-1">Fast • Trusted • Affordable</p>
+  </footer>
 
 </body>
 </html>
